@@ -1,9 +1,1 @@
-* !filter !diff
-encryptcontent.cache filter=git-crypt diff=git-crypt
-mkdocs.yml filter=git-crypt diff=git-crypt
-*.md filter=git-crypt diff=git-crypt
-docs/** filter=git-crypt diff=git-crypt
-site/** filter=git-crypt diff=git-crypt
-*.md text eol=lf charset=utf-8
-*.py text eol=lf charset=utf-8
-*.ipynb text eol=lf charset=utf-8
+
