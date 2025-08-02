@@ -1,6 +1,7 @@
 import os
 import yaml
 import re
+import string
 
 # === Configurations ===
 
@@ -48,16 +49,54 @@ def tree_to_nav(tree):
             nav.append({title: value})
     return nav
 
+def is_likely_text(content, threshold=0.9):
+    """
+    Checks if the majority of content is printable characters
+    (ASCII letters/digits/punctuation/whitespace or CJK).
+    """
+    printable = 0
+    total = len(content)
+
+    # Define allowed ranges
+    allowed = set(string.printable)
+
+    for c in content:
+        if c in allowed:
+            printable += 1
+        elif '\u4e00' <= c <= '\u9fff':  # Chinese CJK Unified Ideographs
+            printable += 1
+
+    if total == 0:
+        return False
+
+    ratio = printable / total
+    return ratio >= threshold
+
 def clean_and_set_level(md_path, level="Imperial"):
     """Update 'level' field and remove 'username'/'password' if present."""
-    with open(md_path, "r", encoding="utf-8") as f:
-        content = f.read()
+    try:
+        with open(md_path, "rb") as f:
+            raw = f.read()
+
+        # Validate UTF-8
+        content = raw.decode("utf-8")
+    except (IOError, UnicodeDecodeError) as e:
+        print(f"❌ Skipping binary or unreadable file: {md_path} ({e})")
+        return
+
+    if not is_likely_text(content):
+        print(f"❌ Skipping file with mostly non-text content: {md_path}")
+        return
 
     fm_match = re.match(r"^(---\n.*?\n---\n)(.*)$", content, re.DOTALL)
     if fm_match:
         fm_text = fm_match.group(1)
         rest = fm_match.group(2)
-        frontmatter = yaml.safe_load(fm_text.strip('-\n')) or {}
+        try:
+            frontmatter = yaml.safe_load(fm_text.strip('-\n')) or {}
+        except yaml.YAMLError as e:
+            print(f"⚠️ Skipping file with bad YAML frontmatter: {md_path} ({e})")
+            return
     else:
         frontmatter = {}
         rest = content
@@ -70,14 +109,19 @@ def clean_and_set_level(md_path, level="Imperial"):
     new_fm_text = "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "---\n"
     new_content = new_fm_text + rest
 
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(new_content)
-    print(f"Updated frontmatter in: {md_path}")
+    try:
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        print(f"✅ Updated frontmatter in: {md_path}")
+    except IOError as e:
+        print(f"❌ Failed to write file: {md_path} ({e})")
+
+
 
 def update_imperial_md_files():
     """Recursively update all .md files in Imperial folder."""
     if not os.path.exists(IMPERIAL_FOLDER):
-        print(f"Imperial folder not found: {IMPERIAL_FOLDER}, skipping.")
+        print(f"⚠️ Imperial folder not found: {IMPERIAL_FOLDER}, skipping.")
         return
 
     for root, _, files in os.walk(IMPERIAL_FOLDER):
@@ -155,12 +199,15 @@ def generate_mkdocs_config():
         "docs_dir": DOCS_DIR,
     }
 
-    with open(MKDOCS_FILE, "w", encoding="utf-8") as f:
-        yaml.dump(config, f, sort_keys=False, allow_unicode=True)
-
-    print(f"{MKDOCS_FILE} generated successfully.")
+    try:
+        with open(MKDOCS_FILE, "w", encoding="utf-8") as f:
+            yaml.dump(config, f, sort_keys=False, allow_unicode=True)
+        print(f"✅ {MKDOCS_FILE} generated successfully.")
+    except IOError as e:
+        print(f"❌ Failed to write {MKDOCS_FILE}: {e}")
 
 # === Main ===
+
 if __name__ == "__main__":
     if not os.path.exists(DOCS_DIR):
         print(f"❌ Docs folder '{DOCS_DIR}' not found.")
