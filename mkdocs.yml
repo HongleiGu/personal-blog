@@ -1,0 +1,183 @@
+site_name: Honglei Gu's personal blog
+repo_url: https://github.com/everythingfades/personal-blog.git
+site_author: Honglei Gu(everythingfades)
+copyright: 2024 by Honglei Gu
+nav:
+- Assets:
+  - Imperial:
+    - '40005':
+      - Notes:
+        - Notes: assets/Imperial/40005/notes/notes.md
+- En:
+  - Coursera:
+    - Meta-Front-Back-End-Certificate:
+      - Django:
+        - Notes: en/coursera/meta-front-back-end-certificate/django/notes.md
+      - Note: en/coursera/meta-front-back-end-certificate/note.md
+    - Ml-Specialization-Deeplearningai:
+      - Advance-Learning-Algorithms:
+        - Week1: en/coursera/ML-specialization-DeeplearningAI/Advance-Learning-Algorithms/week1.md
+      - Supervisedml-Coursera-Ng:
+        - Week1: en/coursera/ML-specialization-DeeplearningAI/SupervisedML-coursera-Ng/week1.md
+        - Week2: en/coursera/ML-specialization-DeeplearningAI/SupervisedML-coursera-Ng/week2.md
+        - Week3: en/coursera/ML-specialization-DeeplearningAI/SupervisedML-coursera-Ng/week3.md
+  - Ctf:
+    - Ctfhub: en/CTF/CTFhub.md
+    - Cyber Security: en/CTF/cyber_security.md
+    - Related: en/CTF/related.md
+  - Leetcode:
+    - Leetcode75-Studyplan:
+      - Array-String:
+        - 1071. Greatest Common Divisor Of Strings: en/Leetcode/Leetcode75-studyplan/Array-String/1071.
+            Greatest Common Divisor of Strings.md
+        - 1431. Kids With The Greatest Number Of Candies: en/Leetcode/Leetcode75-studyplan/Array-String/1431.
+            Kids With the Greatest Number of Candies.md
+        - 151. Reverse Words In A String: en/Leetcode/Leetcode75-studyplan/Array-String/151.
+            Reverse Words in a String.md
+        - 1768. Merge Strings Alternately: en/Leetcode/Leetcode75-studyplan/Array-String/1768.
+            Merge Strings Alternately.md
+        - 238. Product Of Array Except Self: en/Leetcode/Leetcode75-studyplan/Array-String/238.
+            Product of Array Except Self.md
+        - 334. Increasing Triplet Subsequence: en/Leetcode/Leetcode75-studyplan/Array-String/334.
+            Increasing Triplet Subsequence.md
+        - 345. Reverse Vowels Of A String: en/Leetcode/Leetcode75-studyplan/Array-String/345.
+            Reverse Vowels of a String.md
+        - 443. String Compression: en/Leetcode/Leetcode75-studyplan/Array-String/443.
+            String Compression.md
+        - 605. Can Place Flowers: en/Leetcode/Leetcode75-studyplan/Array-String/605.
+            Can Place Flowers.md
+      - Hashset-Map:
+        - 1207. Unique Number Of Occurrences: en/Leetcode/Leetcode75-studyplan/HashSet-Map/1207.
+            Unique Number of Occurrences.md
+        - 1657 Determine If Two Strings Are Close: en/Leetcode/Leetcode75-studyplan/HashSet-Map/1657
+            Determine if Two Strings Are Close.md
+        - 2215 Find The Difference Of Two Arrays: en/Leetcode/Leetcode75-studyplan/HashSet-Map/2215
+            Find the Difference of Two Arrays.md
+        - 2352 Equal Row And Column Pairs: en/Leetcode/Leetcode75-studyplan/HashSet-Map/2352
+            Equal Row and Column Pairs.md
+      - Prefixsum:
+        - 1732. Find The Highest Altitude: en/Leetcode/Leetcode75-studyplan/PrefixSum/1732.
+            Find the Highest Altitude.md
+        - 724. Find Pivot Index: en/Leetcode/Leetcode75-studyplan/PrefixSum/724. Find
+            Pivot Index.md
+      - Slidingwindow:
+        - 1004. Max Consecutive Ones Iii: en/Leetcode/Leetcode75-studyplan/SlidingWindow/1004.
+            Max Consecutive Ones III.md
+        - 1456. Maximum Number Of Vowels In A Substring Of Given Length: en/Leetcode/Leetcode75-studyplan/SlidingWindow/1456.
+            Maximum Number of Vowels in a Substring of Given Length.md
+        - 1493. Longest Subarray Of 1'S After Deleting One Element: en/Leetcode/Leetcode75-studyplan/SlidingWindow/1493.
+            Longest Subarray of 1's After Deleting One Element.md
+        - 643. Maximum Average Subarray: en/Leetcode/Leetcode75-studyplan/SlidingWindow/643.
+            Maximum Average Subarray.md
+      - Stack:
+        - 2390 Removing Stars From A String: en/Leetcode/Leetcode75-studyplan/Stack/2390
+            Removing Stars From a String.md
+      - Twopointers:
+        - 11. Container With Most Water: en/Leetcode/Leetcode75-studyplan/TwoPointers/11.
+            Container With Most Water.md
+        - 1679. Max Number Of K Sum Pairs: en/Leetcode/Leetcode75-studyplan/TwoPointers/1679.
+            Max Number of K-Sum Pairs.md
+        - 283. Move Zeroes: en/Leetcode/Leetcode75-studyplan/TwoPointers/283. Move
+            Zeroes.md
+        - 392. Is Subsequence: en/Leetcode/Leetcode75-studyplan/TwoPointers/392. Is
+            Subsequence.md
+  - Other:
+    - Ai:
+      - Happy Llm: en/other/ai/happy-llm.md
+      - Mcp: en/other/ai/mcp.md
+    - Blender:
+      - Kurtips 基础: en/other/blender/kurtips-基础.md
+      - Kurtips 液体: en/other/blender/kurtips-液体.md
+      - Kurtips 角色: en/other/blender/kurtips-角色.md
+      - 萧阿雨 蔚蓝之海: en/other/blender/萧阿雨-蔚蓝之海.md
+    - Comfyui:
+      - Comfyui: en/other/Comfyui/comfyUI.md
+      - Sdxl + Sd1.5 Basic: en/other/Comfyui/sdxl + sd1.5 basic.md
+    - Drp: docs/en/other/DRP.md
+    - Rabbitmq: en/other/rabbitmq.md
+    - Unity:
+      - Unity: en/other/unity/Unity.md
+  - Unity:
+    - Ggj Design Doc: en/unity/GGJ design doc.md
+    - Nothing Can Go Wrong Design Doc: en/unity/Nothing can go wrong design doc.md
+  - Web:
+    - Coursera:
+      - Meta-Front-End-Certificate:
+        - Index: en/web/coursera/meta-front-end-certificate/index.md
+    - Css: en/web/css.md
+    - Html: en/web/html.md
+    - Nextjs: en/web/nextjs.md
+    - React: en/web/ReAct.md
+  - Work:
+    - Interview Backup: en/work/interview-backup.md
+- Html1: html1.md
+- Index: index.md
+- Zh:
+  - Ctf:
+    - Ctfhub: zh/CTF/CTFHub.md
+  - Web:
+    - Ajax: zh/web/AJAX.md
+    - Css: zh/web/css.md
+    - Html: zh/web/html.md
+    - Js:
+      - Bom: zh/web/js/BOM.md
+      - Dom: zh/web/js/DOM.md
+      - Js Advanced: zh/web/js/js-advanced.md
+      - Js: zh/web/js/js.md
+    - Nodejs: zh/web/nodejs.md
+    - Vue2: zh/web/vue2.md
+    - Webpack: zh/web/webpack.md
+markdown_extensions:
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
+- admonition
+- pymdownx.details
+- pymdownx.tabbed:
+    alternate_style: true
+- attr_list
+- pymdownx.arithmatex:
+    generic: true
+- md_in_html
+theme:
+  name: material
+  features:
+  - content.code.annotate
+  - mermaid
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+dev_addr: 0.0.0.0:9000
+site_url: http://localhost:9000/
+use_directory_urls: false
+extra_javascript:
+- theme/js/mathjax.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
+plugins:
+- search: {}
+- encryptcontent:
+    password_inventory:
+      SED1: SED1-hg1523
+      SED2: SED2-hg1523
+      SED3: SED3-hg1523
+      pintos: pintos-48
+      Imperial: Raymond#1234
+    username_inventory:
+      Imperial: hg1523
+docs_dir: docs
